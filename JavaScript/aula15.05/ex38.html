@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex38</title>
+</head>
+
+<body>
+
+    <h1>Faça um script que receba dois valores e mostre qual é o maior entre eles ou se são iguais</h1>
+
+
+    <input type="text" placeholder="Digite o primeiro valor" id="num1">
+    <input type="text" placeholder="Digite o segundo valor" id="num2">
+
+    <button onclick="resultado()"> Verificar</button>
+
+    <script>
+        function resultado() {
+            var num1 = document.getElementById("num1")
+            var num2 = document.getElementById("num2")
+            var num1int = Number(num1.value)
+            var num2int = Number(num2.value)
+
+            if (num1int > num2int){
+                alert("o maior valor é: " + num1int)
+            }
+            else if(num2int > num1int){
+                alert("o maior valor é: " + num2int)
+            }
+            else{
+                alert("Ambos os valores são inguais")
+            }
+        }
+    </script>
+
+</body>
+
+</html>

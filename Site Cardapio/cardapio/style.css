@@ -1,0 +1,202 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E6E6E6;
+}
+
+
+/* Cabeçalho */
+header {
+    background-color: #974e17;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.link{
+    text-decoration: none; /* tira link */
+    color: #fff;
+    font-weight:bold; 
+    
+}
+
+.titulo {
+    font-size: 36px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+/* Cabeçalho */
+
+/* Conteudo dos pratos */
+.content {
+    background-color: #fff;
+    padding: 20px;
+    margin-left: 5%;
+    margin-right:  5%;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 6px 8px 4px rgba(2, 2, 3, 0.1);
+    display: flex;
+    align-items: center;
+    }
+
+#texto{
+    display: grid;
+    grid-template-columns: 100%;
+    text-align: justify;
+    
+}
+
+.pratos {
+    flex-shrink: 0;
+    width: 200px; 
+    height: auto;
+    margin-right: 20px; 
+    border-radius: 12px;
+    box-shadow: 6px 8px 4px rgba(2, 2, 3, 0.1);
+}
+
+h2{
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 70px;
+    font-family: Just Me Again Down Here;
+
+}
+  
+h4 {
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 30px;
+    font-family: Just Me Again Down Here;
+    
+}
+    
+p {
+    margin-top: 10px;
+    margin-left: 70px;
+    text-align: justify;
+}
+
+h6{
+    font-size: 26px;
+    margin-bottom: 16px;
+    text-align: center;
+    font-family: Just Me Again Down Here;
+}
+
+.preparo {
+    background-color:#fff;
+    padding: 20px;
+    margin-left: 5%;
+    margin-right:  5%;
+    margin-bottom:  40px;
+    border-radius: 10px;
+    box-shadow: 6px 8px 4px rgba(2, 2, 3, 0.1);
+}
+
+.preparo h4 {
+    text-align: center;
+    font-size: 45px;
+    font-family: Just Me Again Down Here;
+
+}
+
+.video {
+    width: 100%;
+    height: 315px;
+}
+/* Conteudo dos pratos */
+
+/* Comentario */
+.comentario {
+    background-color: #fff;
+    padding: 20px;
+    margin-left: 5%;
+    margin-right:  5%;
+    margin-bottom:  40px;
+    border-radius: 10px;
+    box-shadow: 6px 8px 4px rgba(2, 2, 3, 0.1);
+    display: flex;
+    justify-content: center;
+}
+
+.critico{
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin: 2%;
+    border-radius: 10px;
+    box-shadow: 6px 8px 4px rgba(2, 2, 3, 0.1);
+
+
+}
+
+.critico p{
+    margin-left: 0px;
+
+}
+
+h5{
+    text-align: center;
+    font-size: 22px;
+
+}
+
+#notas_critico{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+
+}
+/* Comentario */
+/*--------------------------------------------*/
+
+
+/* Rodapé */
+footer {
+    background-color: #974e17;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+#rodape{
+    height: 45px;
+
+}
+
+#instagram_icon{
+    float: right;
+
+}
+
+#endereco{
+  margin-top: 15px;
+  margin-left: 0px;
+  float: left;
+  color: #fff;
+  font-weight: bold;
+
+}
+/* Rodapé */

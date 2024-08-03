@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 2. Validando idade: Crie um programa que solicite ao usuário o ano em que nasceu, 
+        verifique se a idade é maior ou igual a 18, caso seja, deve escrever "Bem-Vindo" e 
+        encerrar o loop, se não for, deve ser exibido a mensagem "Não permitido" e voltar a 
+        solicitar o ano de nascimento.  -->
+
+    <script>
+
+        var ano = parseInt(prompt("digite um ano de nascimento: "))
+        verifica = 2024 - ano
+
+        while (verifica < 18) {
+
+            alert("entrada não permitida, tente novamente")
+            var ano = parseInt(prompt("digite um ano de nascimento: "))
+            verifica = 2024 - ano
+
+        }
+
+        alert("Entrada liberada!")
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+body {
+    text-align: center;
+    font-family: 'Proximanova opt', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: sans-serif;
+}
+
+header div {
+    justify-content: space-between;
+    gap: 10px;
+
+
+}
+
+header ul {
+    display: flex;
+    gap: 25px;
+    margin: 20px;
+    padding: 0;
+
+}
+
+header li {
+    list-style-type: none;
+    position: relative;
+}
+
+.logo {
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
+.login {
+    background-color: transparent;
+    color: #00b289;
+    border: solid 1px #00b289;
+    border-radius: 5%;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 25px;
+    cursor: pointer;
+
+}
+
+.start {
+    background-color: #00b289;
+    color: #fff;
+    border: solid 1px #00b289;
+    border-radius: 5%;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    cursor: pointer;
+
+}
+
+.butao {
+    padding-right: 30px;
+
+}
+
+.titulo {
+    display: grid;
+    grid-template-columns: 30% 30%;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+}
+
+.titulo h2 {
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.plano {
+    align-content: center;
+    text-transform: uppercase;
+    
+
+}
+.plano span{
+    position: relative;
+    display: flex;
+    gap: 25px;
+    margin: 20px;
+    padding: 0;
+
+
+}
+
+.switch {
+    position: relative;
+    height: 1.5rem;
+    width: 3rem;
+    cursor: pointer;
+    appearance: none;
+    border-radius: 9999px;
+    background-color: rgba(100, 116, 139, 0.377);
+    transition: all .3s ease;
+}
+
+.switch:checked {
+    background-color: #00b289;
+}
+
+.switch::before {
+    position: absolute;
+    content: "";
+    left: calc(1.5rem - 1.6rem);
+    top: calc(1.5rem - 1.6rem);
+    display: block;
+    height: 1.6rem;
+    width: 1.6rem;
+    cursor: pointer;
+    border: 1px solid rgba(100, 116, 139, 0.527);
+    border-radius: 9999px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 3px 10px rgba(100, 116, 139, 0.327);
+    transition: all .3s ease;
+}
+
+switch:hover::before {
+    box-shadow: 0 0 0px 8px rgba(0, 0, 0, .15)
+}
+
+.switch:checked:hover::before {
+    box-shadow: 0 0 0px 8px rgba(236, 72, 153, .15)
+}
+
+.switch:checked:before {
+    transform: translateX(100%);
+    border-color: #00b289;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 400px 400px;
+    gap: 2%;
+    justify-content: center;
+
+
+}
+
+.box {
+    border: solid black 1px;
+    border-radius: 5px;
+    border-color: #666;
+    box-shadow: 0 1px 2px #666;
+    margin-left: 10px;
+    text-align: justify;
+    padding-left: 8%;
+    background-color: #fff;
+}
+
+.box h4 {
+    font-size: 20px;
+}
+
+.price {
+    border-bottom: solid #00b289 1px;
+    width: 60%;
+}
+
+.currency {
+    font-size: 20px;
+}
+
+.amount {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+.duration {
+    font-size: 16px;
+    color: #666;
+}
+
+.checklist {
+    list-style-type: none;
+    padding: 0;
+}
+
+.checklist li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+.checklist li::before {
+    content: '✓';
+    color: #00b289;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.box button {
+    background-color: #00b289;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.blue-shape {
+    position: absolute;
+    left: 60%;
+    bottom: 50%;;
+    z-index: -1;
+    display: block;
+    width: 800px;
+    height: 800px;
+    border-radius: 6.6vw;
+    background-color: #f2faff;
+    transform: rotate(-20deg);
+}

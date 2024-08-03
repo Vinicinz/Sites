@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 2 - Escreva um programa que encontre o palíndromo de maior comprimento em uma string dada. -->
+
+    <!-- adias a data da saida -->
+    <script>
+
+        var frase = prompt("Digite sua frase")
+        var cleanFrase = frase.replace(/[\W_]/g, '')
+        var cleanFraseReverse = frase.split('').reverse().join('')
+        
+        if (cleanFrase == cleanFraseReverse) {
+            alert("Sua frase é um palindromo")
+        }
+        else {
+            alert("Sua Frase não é um palindromo")
+        }
+
+    </script>
+
+</body>
+
+</html>

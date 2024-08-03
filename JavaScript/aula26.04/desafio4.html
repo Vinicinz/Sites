@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!--4 - Escreva um programa que inverta uma string dada.
+  -->
+
+    <script>
+
+        var frase = prompt("digite uma palavra aqui: ")
+        var tamanho = frase.length - 1
+        var reverte = frase.split('').reverse().join(' ')
+
+        for (var i = tamanho; i >= 0; i--) {
+            var letra = frase[i]
+            document.write(letra)
+        }
+        alert("a string invertida é: " + reverte)
+
+
+
+
+    </script>
+
+</body>
+
+</html>

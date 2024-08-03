@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex35</title>
+</head>
+
+<body>
+
+    <h1>Exercicio soma</h1>
+
+    <input type="text" placeholder="Digite um numero aqui" id="soma1"> +
+    <input type="text" placeholder="Digite seu segundo numero aqui" id="soma2">
+
+    <button onclick="somatoria()"> somar </button>
+
+
+
+    <script>
+        function somatoria () {
+            var soma1 = document.getElementById('soma1')
+            var soma2 = document.getElementById('soma2')
+            var n1 = Number(soma1.value)
+            var n2 = Number(soma2.value)
+            var resultado = n1 + n2
+
+            alert('sua soma foi de: ' + resultado)
+        }
+
+    </script>
+
+</body>
+
+</html>

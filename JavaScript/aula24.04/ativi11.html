@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- 4 -  Escreva um programa que recebe uma nota de 0 a 100 de um estudante e 
+        imprime se ele foi aprovado (nota >= 70),
+         está em recuperação (nota entre 50 e 69) ou foi reprovado (nota < 50). -->
+
+
+    <script>
+        var nota1 = parseInt(prompt("Digite a primeira nota do seu aluno: "))
+        var nota2 = parseInt(prompt("Digite a segunda nota do seu aluno: "))
+        var nota3 = parseInt(prompt("Digite a terceira nota do seu aluno: "))
+
+        var notaFinal = (nota1 + nota2 + nota3) / 3
+
+        if (notaFinal >= 70) {
+            alert("Seu aluno passou direto com: " + notaFinal)
+        }
+        else if (notaFinal >= 50) {
+            alert("Seu aluno está de recuperação com: " + notaFinal)
+        }
+        else {
+            alert("Seu aluno está reprovado com: " + notaFinal)
+        }
+    </script>
+</body>
+
+</html>

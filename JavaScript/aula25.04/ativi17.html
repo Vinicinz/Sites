@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 
+        5 - Escreva um programa que aceita dois números do usuário. 
+        Se os números não forem iguais e a soma deles for maior que 100 ou menor que 20, 
+        exiba a mensagem "Os números não são iguais e a soma deles é maior que 100 ou menor que 20".
+     -->
+    <script>
+
+        var num1 = parseInt(prompt("Digite o primeiro numero aqui: "))
+        var num2 = parseInt(prompt("Digite o segundo numero aqui: "))
+
+        if (!(num1 == num2) && ((num1 + num2 >100)) || (num1 + num2 < 20)){
+            alert("os números não são iguais e a soma deles é maior que 100 ou menor que 20")
+        }
+        else if (num1 == num2) {
+            alert("O numero são iguais")
+        }
+        else if (!((num1 + num2 >100) || (num1 + num2 < 20))) {
+            alert("o numeros não são maior que 100 ou menor que 20")
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 3. Escreva um programa em 
+        JavaScript que recebe uma matriz e retorna qual o
+         maior e qual o menor número. -->
+</body>
+
+<script>
+    var matriz =
+        [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ]
+    var maior = 0
+    for (var i = 0; i < matriz.length; i++) {
+        for (var j = 0; j < matriz[i].length; j++) {
+            if (matriz[i][j] > maior) {
+                maior = matriz[i][j]
+            }
+
+        }
+
+    }
+    document.write(maior)
+
+
+</script>
+
+</html>

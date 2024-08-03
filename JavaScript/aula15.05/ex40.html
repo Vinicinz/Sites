@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex40</title>
+</head>
+
+<style>
+    td {
+        border: solid black 1px;
+    }
+</style>
+
+<body>
+    <h1>Faça um arquivo que receba 3 notas reais e calcule e mostre a media do aluno e o conceito apareça conforme as
+        regras abaixo:</h1>
+
+    <table>
+        <tr>
+            <td>media</td>
+            <td>conceito</td>
+        </tr>
+        <tr>
+            <td> >=6</td>
+            <td>Aprovado</td>
+        </tr>
+        <tr>
+            <td> > 3 e < 6 </td>
+            <td>Exame</td>
+        </tr>
+        <tr>
+            <td>"< 3"</td>
+            <td>Reprovado</td>
+        </tr>
+    </table>
+
+    <div>
+        <p>Qual as notas do seu aluno?</p>
+
+        <input type="text" id="nota1" placeholder="Digite a primeira Nota">
+        <input type="text" id="nota2" placeholder="Digite a segunda Nota">
+        <input type="text" id="nota3" placeholder="Digite a terceira Nota">
+
+        <button onclick="calculo()"> Calcular</button>
+
+        <div id="container"></div>
+
+    </div>
+
+    <script>
+        function calculo() {
+
+            var nota1 = document.getElementById('nota1')
+            var nota2 = document.getElementById('nota2')
+            var nota3 = document.getElementById('nota3')
+
+            var num1int = Number(nota1.value)
+            var num2int = Number(nota2.value)
+            var num3int = Number(nota3.value)
+
+            var media = (num1int + num2int + num3int) / 3
+
+            var container = document.getElementById('container')
+            container.innerHTML = ''
+            var newParagraph = document.createElement('p')
+
+
+            if (media >= 6 & media <=10) {
+
+            }
+            else if (media >= 3 & media < 6) {
+                newParagraph.textContent = "A media é: " + media + "e o Aluno esta de recuperação!"
+                container.appendChild(newParagraph)
+            }
+            else if (media >= 0 & media < 3) {
+                newParagraph.textContent = "A media é: " + media + "e o Aluno esta reprovado!"
+                container.appendChild(newParagraph)
+            }
+            else{
+                newParagraph.textContent = "Formato invalido para as notas"
+                container.appendChild(newParagraph)
+            }
+        }
+    </script>
+
+</body>
+
+</html>

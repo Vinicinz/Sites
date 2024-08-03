@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    body {
+        background-color: black;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .container {
+        position: relative;
+        gap: 1em;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        transition: all 400ms;
+        width: 900px;
+        height: 900px;
+    }
+
+    .box {
+        background: var(--img) center center;
+        background-size: cover;
+        display: flex;
+        transition: all 500ms;
+
+    }
+
+    .container:hover .box {
+        filter: grayscale(100%) opacity(24%);
+    }
+
+    .container .box:hover {
+        filter: grayscale(0%) opacity(100%);
+    }
+
+    .container:has(.box-1:hover) {
+        grid-template-columns: 3fr 1fr 1fr 1fr;
+    }
+
+    .container:has(.box-2:hover) {
+        grid-template-columns: 1fr 3fr 1fr 1fr;
+    }
+
+    .container:has(.box-3:hover) {
+        grid-template-columns: 1fr 1fr 3fr 1fr;
+    }
+
+    .container:has(.box-4:hover) {
+        grid-template-columns: 1fr 1fr 1fr 3fr;
+    }
+
+    .box:nth-child(odd) {
+        transform: translateY(-16px);
+    }
+
+    .box:nth-child(even) {
+        transform: translateY(16px);
+    }
+</style>
+<div class="container">
+    <div class="box box-1" style="--img: url(./img/img-1.jpg);"></div>
+    <div class="box box-2" style="--img: url(./img/img-2.jpg);"></div>
+    <div class="box box-3" style="--img: url(./img/img-3.jpg);"></div>
+    <div class="box box-4" style="--img: url(./img/img-4.jpg);"></div>
+</div>
+
+</body>
+
+</html>

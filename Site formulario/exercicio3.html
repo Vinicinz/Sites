@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="modelo1">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="exercicio3.css" type= "text/css" />
+</head>
+
+<body class="form">
+    <form action="" method = "POST" class="">
+        <h1 class="modelo2"> Formulário de contato </h1>
+            <h3 class= "texto">Preencha todos os campos<br/></h3>
+       <div> 
+            <div>
+                <Div class="rotulos">Nome : </Div>
+                <input id="nome" type="text" name=Nome required="required" placeholder="Nome Completo" autofocus="autofocus" class="entrada" >
+            </div>
+            <div>
+                <Div class="rotulos">Email : </Div>
+                <input required="required" id="email" type="email" name=email placeholder="E-mail Valido" class="entrada">
+            </div>
+            <div>
+                <Div class="rotulos">Assunto :  </Div>
+                <select name="opções" required="required" class="entrada">
+                    <Option value=""></Option>
+                    <option value="Duvidas do Prduto"> Duvidas do produto</option>
+                    <option value="Atraso na entrega"> Atraso na entrega</option>
+                </select>
+            </div>
+            <div>
+                <Div class="rotulos">Mensagem : </Div>
+                <textarea name=" mensagem" id="mensagem" placeholder="Sua mensagem aqui" cols="30" rows="10" required="required" class="entrada"></textarea>
+            </div>
+            <div>
+                <div class="rotulos"></div>
+                <input type="submit" value="Enviar" class="button">
+            </div>
+        </div>
+    </form>
+</body>
+</html>

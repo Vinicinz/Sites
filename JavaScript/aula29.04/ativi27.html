@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 4. Adivinhação: Salve em uma variável um número aleatório 
+        e solicita ao usuário que adivinhe o número secreto,
+         informando se o número digitado é maior ou menor que o número secreto, 
+         até que o usuário acerte. -->
+
+    <script>
+
+        var valorCompu = Math.floor(Math.random() * 10)
+
+        var tentativa = parseInt(prompt("Faça sua tentativa!"))
+
+        while (tentativa != valorCompu) {
+
+            if (tentativa < valorCompu) {
+                alert("você chutou baixo, tente algo mais alto!")
+            }
+            if (tentativa > valorCompu) {
+                alert("Você chutou alto, tente algo mais baixo!")
+            }
+            tentativa = parseInt(prompt("Faça sua tentativa!"))
+        }
+
+        alert("Parabens, você acertou!")
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de Manipulação do DOM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        
+        .example {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        
+        .example h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="testeDOM.js"></script>
+    <h1>Exemplos de Manipulação do DOM</h1>
+
+    <!-- Exemplo 1: Adicionar Elemento -->
+    <div class="example" id="example1">
+        <h2>Adicionar Elemento</h2>
+        <button onclick="addElement()">Adicionar Parágrafo</button>
+        <div id="container1"></div>
+    </div>
+
+    <!-- Exemplo 2: Remover Elemento -->
+    <div class="example" id="example2">
+        <h2>Remover Elemento</h2>
+        <button onclick="removeElement()">Remover Parágrafo</button>
+        <div id="container2">
+            <p id="paragraph2">Este parágrafo será removido.</p>
+        </div>
+    </div>
+
+    <!-- Exemplo 3: Modificar Conteúdo de um Elemento -->
+    <div class="example" id="example3">
+        <h2>Modificar Conteúdo de um Elemento</h2>
+        <button onclick="modifyContent()">Modificar Conteúdo</button>
+        <p id="paragraph3">Este conteúdo será modificado.</p>
+    </div>
+
+    <!-- Exemplo 4: Modificar Atributos -->
+    <div class="example" id="example4">
+        <h2>Modificar Atributos</h2>
+        <button onclick="modifyAttribute()">Modificar Atributo</button>
+        <img id="image1" src="https://via.placeholder.com/150" alt="Imagem Exemplo">
+    </div>
+
+    <!-- Exemplo 5: Adicionar Classe CSS -->
+    <div class="example" id="example5">
+        <h2>Adicionar Classe CSS</h2>
+        <button onclick="addClass()">Adicionar Classe</button>
+        <p id="paragraph4">Este parágrafo receberá uma nova classe.</p>
+    </div>
+
+    <!-- Exemplo 6: Remover Classe CSS -->
+    <div class="example" id="example6">
+        <h2>Remover Classe CSS</h2>
+        <button onclick="removeClass()">Remover Classe</button>
+        <p id="paragraph5" class="highlight">Esta classe será removida.</p>
+    </div>
+
+    <!-- Exemplo 7: Alternar Classe CSS -->
+    <div class="example" id="example7">
+        <h2>Alternar Classe CSS</h2>
+        <button onclick="toggleClass()">Alternar Classe</button>
+        <p id="paragraph6">Esta classe será alternada.</p>
+    </div>
+
+
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</body>
+
+</html>

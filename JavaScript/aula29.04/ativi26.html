@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 3. Somando números: Crie um programa que solicite 
+        ao usuário 1 número, até que o usuário digite 0. No final 
+        deve mostrar a soma de todos os números informados. Ex: 
+        Caso tenha digitado 1, 5, 10, 8, 5, 1, 0 - O Resultado será 30 -->
+
+
+
+    <script>
+
+        var num1 = parseInt(prompt("Digite seu primeiro numero aqui: "))
+        var num2 = parseInt(prompt("Digite o valor a somar: "))
+        var soma = num1 + num2
+
+        while (num2 != 0) {
+            num2 = parseInt(prompt("Digite o valor a somar: "))
+            var soma = soma + num2
+        }
+        alert("A soma foi de: " + soma)
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,240 @@
+/* Header */
+
+.top-home {
+    background-color: #c3e3fd;
+    color: #2f2c79;
+}
+
+.aba {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 20px;
+    font-size: 25px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    position: relative;
+    line-height: 28px;
+    width: 400px;
+}
+
+.menu {
+    margin: 0;
+    display: none;
+    float: right;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+}
+
+.menu ul li {
+    margin-right: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.menu ul li a {
+    float: right;
+    color: #2f2c79;
+    background-color: white;
+    text-align: center;
+    text-decoration: none;
+    border: #080808 solid 1px;
+    margin: 2px;
+    border: solid black 1px;
+    border-radius: 5px;
+    padding: 14px 25px;
+}
+
+.menu ul li a:hover {
+    background-color: #c3e3fd;
+    transform: scale(1.1);
+}
+
+.cart {
+    right: 20px;
+    top: 50%;
+    font-size: 20px;
+    color: #1b1212;
+}
+
+.cart:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+/* MAIN */
+
+
+/* palavras residencial, indusrial e rural */
+
+.palavra {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration-line: underline;
+    text-decoration-style: double;
+    background-color: #99fefd;
+    color: #2d2c55;
+    padding: 15px;
+    border: 1px solid #00b880;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+
+/* texto explicando sobre energia solar */
+
+.texto {
+    background-color: #edfffa;
+    border: 1px solid #00b880;
+    border-radius: 5px;
+    margin: 50px;
+    justify-content: center;
+    padding: 10px;
+    flex: 10;
+    box-shadow: 9px 6px #2196f3;
+    font-family: sans-serif;
+}
+
+.titulo2 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+
+/* link serviço, montagem e informação  tambem regula o tamanho do botão e a maozinha quando mouse passa por cima*/
+
+.buttons {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.buttons a:link {
+    background-color: white;
+    border: solid black 1px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 2% 2%;
+    display: inline-block;
+    color: #2f2c79;
+    text-decoration: none;
+}
+
+.buttons a:hover {
+    background-color: #2196f3;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #c3e3fd;
+    padding: 20px;
+    margin: 0px;
+    font-size: 14px;
+    color: #2f2c79;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.nofooter {
+    display: flex;
+    justify-items: center;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.social-media-icons {
+    width: 25x;
+    height: 25px;
+}
+
+
+/* redes sociais */
+
+.container2 {
+    position: relative;
+    gap: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    transition: all 400ms;
+    width: 100%;
+    height: 400px;
+    font-family: sans-serif;
+}
+
+.box {
+    background: var(--img) center center;
+    background-size: cover;
+    display: flex;
+    transition: all 500ms;
+    border: solid black 1px;
+    border-radius: 5px;
+    justify-content: center;
+    box-shadow: 0 0 1px 1px #2196f3;
+}
+
+.box::after {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 20px;
+    background: black;
+    color: white;
+    padding: 10px 10px 10px 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    transform: translateY(60px);
+    opacity: 0%;
+    transition: all 400ms;
+}
+
+.container2:hover .box {
+    filter: grayscale(100%) opacity(24%);
+}
+
+.container2 .box:hover {
+    filter: grayscale(0%) opacity(100%);
+    box-shadow: 0 0 4px 2px #2196f3;
+}
+
+.box:hover::after {
+    transform: translateY(0);
+    opacity: 100%;
+    transition-delay: 400ms;
+}
+
+.container2:has(.box-1:hover) {
+    grid-template-columns: 3fr 1fr 1fr;
+}
+
+.container2:has(.box-2:hover) {
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.container2:has(.box-3:hover) {
+    grid-template-columns: 1fr 1fr 3fr;
+}

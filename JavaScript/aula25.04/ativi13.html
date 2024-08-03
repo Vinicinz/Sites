@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 1 - Escreva um programa que aceita dois números do usuário. 
+        Se ambos os números forem maiores que 10, exiba a mensagem 
+        "Ambos os números são maiores que 10". -->
+
+    <Script>
+
+        var num1 = parseInt(prompt("DIgite seu numero aqui: "))
+        var num2 = parseInt(prompt("Digite seu segundo numero: "))
+
+        if (num1 > 10 && num2 > 10) {
+            alert("Ambos os numeros são maior que 10")
+        }
+        else if (num1 > 10) {
+            alert("Somente o " + num1 + " é maior que 10")
+        }
+        else if (num2 > 10) {
+            alert("somente o " + num2 + " é maior que 10")
+        }
+        else {
+            alert("Nenhum dos numeros são maiores que 10")
+        }
+
+
+    </Script>
+
+</body>
+
+</html>

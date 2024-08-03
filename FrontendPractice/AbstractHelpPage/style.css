@@ -1,0 +1,128 @@
+body {
+    text-align: center;
+    margin: 0;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.Header {
+    color: azure;
+    background-color: black;
+    height: 50px;
+}
+
+.Titulo {
+    display: flex;
+    float: left;
+    padding-left: 10%;
+    padding-top: 10px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.Submit {
+    padding-left: 10%;
+    padding-top: 15px;
+    font-size: 25px;
+}
+
+.Submit button {
+    margin: 10px;
+    padding: 5px 10px;
+    background-color: rgb(12, 12, 12);
+    color: azure;
+    font-family: cambria;
+    letter-spacing: 1px;
+    font-size: 15px;
+    border: solid 1px azure;
+    border-radius: 5px;
+}
+
+.Submit button:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+.Sign {
+    padding-top: 10px;
+    font-size: 25px;
+
+}
+
+.Sign button {
+    margin: 10px;
+    padding: 5px 10px;
+    background-color: #4C5FD5;
+    color: azure;
+    font-family: cambria;
+    letter-spacing: 1px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+
+}
+
+.main {
+    background-color: #dadbf1;
+    padding: 50px;
+}
+
+.main2 h1 {
+    font-size: 40px;
+
+}
+
+.main input {
+    width: 50%;
+    border: solid 1px black;
+    padding: 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 20%;
+    margin-right: 20%;
+
+}
+
+.box {
+    margin: 10px;
+    position: center;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+
+}
+
+.container svg {
+    padding: 10px;
+    margin: 10px;
+    width: 90px;
+    align-self: center;
+
+}
+.container a:visited{
+color: blue ;
+
+}
+.container h2{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: start;
+
+}
+.container p{
+    font-size: 20px;
+    text-align: justify;
+
+}

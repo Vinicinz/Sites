@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 2 - Escreva um programa que aceita um número do usuário. 
+        Se o número for divisível por 3 ou 5, exiba a mensagem 
+        "O número é divisível por 3 ou 5". -->
+    <script>
+
+        var num = parseInt(prompt("Digite seu numero aqui: "))
+
+        if (num % 3 == 0 && num % 5 == 0) {
+            alert("Seu numero é divisivel por 3 e 5")
+        }
+        else if (num % 3 == 0) {
+            alert("Seu numero é divisivel apenas por 3")
+
+        }
+        else if (num % 5 == 0) {
+            alert("Seu numero é divisivel apenas por 5")
+
+        }
+        else {
+            alert("Seu numero não é divisivel nem por 3 nem por 5")
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex37</title>
+</head>
+<body>
+
+    <h1>Faça um script que receba um numero inteiro e mostre se esse numero é par ou impar em uma saida alert</h1>
+
+    <input type="text" id="numero" placeholder="Digite seu numero aqui">
+
+    <button onclick="parouinpar()"> Verificar</button>
+
+    <script>
+
+        function parouinpar(){
+            var num = document.getElementById("numero")
+            var numint = Number(num.value)
+
+            if (numint % 2 == 0){
+                alert("Seu numero é par")
+            }
+            else{
+                alert("Seu numero é impar")
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

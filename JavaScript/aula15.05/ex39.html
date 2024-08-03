@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex39</title>
+</head>
+
+<style>
+    .retangulo {
+        display: none;
+        width: 200px;
+        height: auto;
+        border: solid black 1px;
+        border-radius: 2px;
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .triangulo {
+        display: none;
+        width: 200px;
+        height: auto;
+        border: solid black 1px;
+        border-radius: 2px;
+        margin: 5px;
+        padding: 10px;
+
+    }
+</style>
+
+<body>
+    <h1>Crie um arquivo HTML que utilizando o JavaScript de a opção de selecionar entre um triangulo e um retangulo,
+        então leia a base e altura de um retangulo ou os vertices do triangulo e calcule a
+        area e apresente os resultados em HTML
+    </h1>
+
+    <h2>Selecione entre um triangulo ou um retangulo</h2>
+    <button onclick="retangulo()"> Retangulo </button>
+    <button onclick="triangulo()"> Triangulo </button>
+
+    <div id="retangulomenu" class="retangulo">
+        <p>Você selecionou o retangulo</p>
+        <input type="text" placeholder="Qual a base?" id="base">
+        <input type="text" placeholder="Qual a altura?" id="altura">
+        <button onclick="calculo1()"> Calcular</button>
+        <div id="container1"></div>
+
+
+    </div>
+
+    <div id="triangulomenu" class="triangulo">
+        <p>Você selecionou o triangulo retangulo</p>
+        <p>Vamos achar a hipotenusa</p>
+        <input type="text" placeholder="Qual o cateto?" id="cateto1">
+        <input type="text" placeholder="Qual o segundo cateto?" id="cateto2">
+        <button onclick="calculo2()"> Calcular</button>
+        <div id="container2"></div>
+
+    </div>
+
+    <script>
+        function retangulo() {
+            var retangulo = document.getElementById('retangulomenu');
+            if (retangulo.style.display === 'none') {
+                retangulo.style.display = 'block';
+            } else {
+                retangulo.style.display = 'none';
+            }
+        }
+        function triangulo() {
+            var triangulo = document.getElementById('triangulomenu');
+            if (triangulo.style.display === 'none') {
+                triangulo.style.display = 'block';
+            } else {
+                triangulo.style.display = 'none';
+            }
+        }
+        function calculo1() {
+            var num1 = document.getElementById('base')
+            var num2 = document.getElementById('altura')
+            var num1int = Number(num1.value)
+            var num2int = Number(num2.value)
+
+            var area = num1int * num2int
+
+            var container = document.getElementById('container1')
+            container.innerHTML = ''
+            var newParagraph = document.createElement('p')
+            newParagraph.textContent = "Sua area é de: " + area
+            container.appendChild(newParagraph)
+
+        }
+        function calculo2() {
+            var num1 = document.getElementById('cateto1')
+            var num2 = document.getElementById('cateto2')
+            var num1int = Number(num1.value)
+            var num2int = Number(num2.value)
+
+            var hip = Math.sqrt(Math.pow(num1int, 2) + Math.pow(num2int, 2))
+            var container = document.getElementById('container2')
+            container.innerHTML = ''
+            var newParagraph = document.createElement('p')
+            newParagraph.textContent = "A hipotenusa é: " + hip
+            container.appendChild(newParagraph)
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex43</title>
+</head>
+<style>
+    body {
+        color: white;
+        background-color: black;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .div {
+        border: solid white 1px;
+        width: 400px;
+        height: 400px;
+        padding: 20px;
+    }
+
+    p {
+        margin: 5px;
+    }
+
+    input {
+        margin: 10px 0;
+        padding: 10px;
+        width: 80%;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    h1 {
+        text-align: center;
+        padding: 20px;
+    }
+</style>
+</head>
+
+<body>
+    <h1>Crie um arquivo HTML que contenha um formulário conforme exemplo abaixo. Neste mesmo JavaScript, crie uma função
+        que calcule a operação associada ao clique do botão correspondente.</h1>
+
+    <div class="div">
+        <h2>Calculadora</h2>
+        <p>Primeiro valor</p>
+        <input type="text" id="num1" placeholder="Primeiro valor">
+        <p>Segundo valor</p>
+        <input type="text" id="num2" placeholder="Segundo valor">
+        <!-- <div class="">
+            <button onclick="adicao()">Adição +</button>
+            <button onclick="subtracao()"> Subtração -</button>
+            <button onclick="multiplicacao()">Multiplicação X</button>
+            <button onclick="divisao()">Divisão /</button>
+            <hr>
+        </div> -->
+        <div>
+            <button onclick="calculate('adição')">Adição +</button>
+            <button onclick="calculate('subtração')">Subtração -</button>
+            <button onclick="calculate('multiplicação')">Multiplicação X</button>
+            <button onclick="calculate('divisao')">Divisão /</button>
+            <hr>
+        </div>
+        <div id="container"></div>
+    </div>
+
+    <!-- Fiz meu codigo dessa forma, mas achei extremamente mal otimizado e pesquisando aprendi a fazer mais otimizado
+    <script>
+        function adicao() {
+            var num1 = document.getElementById('num1')
+            var num2 = document.getElementById('num2')
+            var num1int = Number(num1.value)
+            var num2int = Number(num2.value)
+
+            var container = document.getElementById('container')
+            container.innerHTML = ''
+            var newParagraph = document.createElement('p')
+
+            soma = num1int + num2int
+            newParagraph.textContent = "Sua soma é de: " + soma
+            container.appendChild(newParagraph)
+        }
+        function subtracao() {
+            var num1 = document.getElementById('num1')
+            var num2 = document.getElementById('num2')
+            var num1int = Number(num1.value)
+            var num2int = Number(num2.value)
+
+            var container = document.getElementById('container')
+            container.innerHTML = ''
+            var newParagraph = document.createElement('p')
+
+            sub = num1int - num2int
+            newParagraph.textContent = "Sua subtração é de: " + sub
+            container.appendChild(newParagraph)
+        }
+        function multiplicacao() {
+            var num1 = document.getElementById('num1')
+            var num2 = document.getElementById('num2')
+            var num1int = Number(num1.value)
+            var num2int = Number(num2.value)
+
+            var container = document.getElementById('container')
+            container.innerHTML = ''
+            var newParagraph = document.createElement('p')
+
+            mult = num1int * num2int
+            newParagraph.textContent = "Sua multiplicação é de: " + mult
+            container.appendChild(newParagraph)
+        }
+        function divisao() {
+            var num1 = document.getElementById('num1')
+            var num2 = document.getElementById('num2')
+            var num1int = Number(num1.value)
+            var num2int = Number(num2.value)
+
+            var container = document.getElementById('container')
+            container.innerHTML = ''
+            var newParagraph = document.createElement('p')
+
+            div = num1int / num2int
+            newParagraph.textContent = "Sua divisão é de: " + div
+            container.appendChild(newParagraph)
+        }
+    
+    </script> -->
+
+    <script>
+        function calculate(operation) {
+            var num1 = document.getElementById('num1').value;
+            var num2 = document.getElementById('num2').value;
+            var num1int = parseFloat(num1);
+            var num2int = parseFloat(num2);
+
+            if (isNaN(num1int) || isNaN(num2int)) {
+                alert("Por favor, insira valores numéricos válidos.");
+                return;
+            }
+
+            var result;
+            switch (operation) {
+                case 'adição':
+                    result = num1int + num2int;
+                    break;
+                case 'subtração':
+                    result = num1int - num2int;
+                    break;
+                case 'multiplicação':
+                    result = num1int * num2int;
+                    break;
+                case 'divisao':
+                    if (num2int === 0) {
+                        alert("Divisão por zero não é permitida.");
+                        return;
+                    }
+                    result = num1int / num2int;
+                    break;
+                default:
+                    return;
+            }
+
+            var container = document.getElementById('container');
+            container.innerHTML = '';
+            var newParagraph = document.createElement('p');
+            newParagraph.textContent = `O resultado da ${operation} é: ${result}`;
+            container.appendChild(newParagraph);
+        }
+    </script>
+
+</body>
+
+</html>

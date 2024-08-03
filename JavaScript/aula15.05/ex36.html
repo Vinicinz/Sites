@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex36</title>
+</head>
+
+<style>
+    td {
+        border: solid black 1px;
+    }
+</style>
+
+<body>
+
+    <h1>Criar um script que solicite ao usuario o valor total da compra e a quantidade de parcelas a financiar e o
+        sistema deve visualizar o valor de cada parcela de acordo com os juros da tabela abaixo
+    </h1>
+    <table>
+        <tr>
+            <td>n° parcelas</td>
+            <td>% de juros</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>7</td>
+        </tr>
+    </table>
+
+
+    <div>
+        <p>Qual o valor total da compra?</p>
+        <input type="text" placeholder="Digite aqui" id="valor">
+
+        <p>Qual o numero de parcelas?</p>
+        <input type="text" placeholder="Digite aqui" id="parcela">
+
+    </div>
+    <button onclick="verificar()">Verificar</button>
+
+    <script>
+        function verificar() {
+            var valor = document.getElementById("valor")
+            var parcela = document.getElementById("parcela")
+            var valorint = Number(valor.value)
+            var parcelaint = Number(parcela.value)
+
+            if (parcelaint == 1) {
+                alert("Seu valor a se pagar é de: " + valorint)
+            }
+            else if (parcelaint == 2 || parcelaint == 3) {
+                var juros = valorint * (3 / 100)
+                alert("Seu valor a se pagar é de: " + (valorint + juros))
+            }
+            else if (parcelaint == 4) {
+                var juros = valorint * (7 / 100)
+                alert("Seu valor a se pagar é de: " + (valorint + juros))
+            }
+            else{
+                alert("Sua parcela não corresponde ao aceitado")
+            }
+        }
+    </script>
+</body>
+
+</html>

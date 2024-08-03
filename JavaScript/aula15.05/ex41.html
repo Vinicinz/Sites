@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex41</title>
+</head>
+<style>
+    td {
+        border: black solid 1px;
+        padding: 2px;
+    }
+</style>
+
+<body>
+
+    <h1>elabore um script que leia o valor de um produto e a condição de pagamento conforme a tabela abaixo, exiba o
+        final do script o valor real do produto e o valor a aser pago, leia os valores por meio de um formulario e
+        mostre a msg com o document. write
+    </h1>
+
+    <table>
+        <tr>
+            <td>codigo</td>
+            <td>Condição de pagamento</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td> A vista 10% de desconto</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>cartão 5% de desconto</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Parcelado 10% de aumento</td>
+        </tr>
+    </table>
+
+
+    <div>
+        <p>Qual o produto que você deseja pagar?</p>
+        <input type="text" placeholder="Nome do produto" id="nome">
+        <p>Qual o valor do produto?</p>
+        <input type="text" placeholder="Valor do produto" id="valor">
+        <p>Qual a condição de pagamento?</p>
+        <select id="op" required="required">
+            <option value=""></option>
+            <option value="1">A vista 10% de desconto</option>
+            <option value="2">Cartão 5% de desconto</option>
+            <option value="3">Parcelado 10% de aumento</option>
+        </select>
+
+        <button onclick="analise()"> Analisar</button>
+
+        <div id="container"></div>
+
+
+    </div>
+
+
+    <script>
+        function analise() {
+            var valor = document.getElementById('valor')
+            var nome = document.getElementById("nome").value
+            var valorint = Number(valor.value)
+
+            var select = document.getElementById('op')
+            var valorSelecionado = select.value
+
+            var container = document.getElementById('container')
+            container.innerHTML = ''
+            var newParagraph = document.createElement('p')
+
+            if (valorSelecionado == 1) {
+                total = valorint - (valorint * (10 / 100))
+                newParagraph.textContent = "O valor do " + nome + " a ser pago é de: R$" + total
+                container.appendChild(newParagraph)
+            }
+            else if (valorSelecionado == 2) {
+                total = valorint - (valorint * (5 / 100))
+                newParagraph.textContent = "O valor do " + nome + " a ser pago é de: R$" + total
+                container.appendChild(newParagraph)
+            }
+            else if (valorSelecionado == 3) {
+                total = valorint + (valorint * (10 / 100))
+                newParagraph.textContent = "O valor do " + nome + " a ser pago é de: R$" + total
+                container.appendChild(newParagraph)
+            }
+        }
+
+    </script>
+</body>
+
+</html>

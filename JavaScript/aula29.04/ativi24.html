@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1. Calculadora básica: Crie um programa que solicite ao 
+        usuário 2 números, após pergunte qual operação matemática deseja 
+        realizar (adição, subtração, multiplicação, divisão). 
+        Após exibir o resultado o programa deve perguntar se o usuário 
+        deseja realizar outro calculo, se ele digitar que não o loop 
+        deve ser encerrado. -->
+
+
+    <script>
+
+        var num1 = parseInt(prompt("Digite seu valor aqui: "))
+        var num2 = parseInt(prompt("Digite seu segundo valor: "))
+        var operador = prompt("qual operador deseja utilizar? (1,2,3 ou 4? Adição, subtração, multiplicação ou divisão)")
+        var soma = num1 + num2
+
+
+        var user = "s"
+
+        if (operador == 1){
+            while (user == "s") {
+                var num2 = parseInt(prompt("Digite seu valor: "))
+                soma += num2
+                user = prompt("quer continuar? (s/n")
+            }
+            alert("seu resultado foi de: " + soma)
+        }
+        
+        if (operador == 2){
+            while (user == "s") {
+                var num2 = parseInt(prompt("Digite seu valor: "))
+                soma -= num2
+                user = prompt("quer continuar? (s/n")
+            }
+            alert("seu resultado foi de: " + soma)
+        }
+
+        
+        if (operador == 3){
+            while (user == "s") {
+                var num2 = parseInt(prompt("Digite seu valor: "))
+                soma *= num2
+                user = prompt("quer continuar? (s/n")
+            }
+            alert("seu resultado foi de: " + soma)
+        }
+
+        
+        if (operador == 4){
+            while (user == "s") {
+                var num2 = parseInt(prompt("Digite seu valor: "))
+                soma = soma / num2
+                user = prompt("quer continuar? (s/n")
+            }
+            alert("seu resultado foi de: " + soma)
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

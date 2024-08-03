@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Escreva um programa em JavaScript que
+receba uma lista de strings e retorne uma
+nova lista contendo as strings com mais de
+5 caracteres. -->
+
+
+
+    <script>
+        var lista = ['uma', 'palavra', 'vai', 'receber', 'algo', 'tipo', 'varias', 'outras', 'modificações']
+
+        var novaLista = []
+
+        for (var i = 0; i < lista.length; i++) {
+            if (lista[i].length > 5) {
+                novaLista.push(lista[i])
+            }
+        }
+
+        alert(novaLista)
+    </script>
+</body>
+
+</html>

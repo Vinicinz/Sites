@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- Crie um programa e declare uma variável PI (use 4 casas após a vírgula). Dados o raio e a altura, 
+    calcular e apresentar o valor do volume de uma lata de óleo, 
+    utilizando a fórmula: volume = PI * r 2 * altura -->
+
+<body>
+    <script>
+
+        var raio = parseFloat(prompt("Digite seu raio do cilindro: "))
+        var altura = parseFloat(prompt("Digite sua altura do cilindro"))
+
+        var volume = Math.PI * Math.pow(raio,2) * altura
+        alert("Seu cilindro tem volume de: " + volume)
+
+
+
+    </script>
+
+</body>
+
+</html>

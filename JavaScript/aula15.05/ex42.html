@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex42</title>
+</head>
+
+<style>
+    body {
+        background-color: black;
+        color: white;
+        font-size: 24px;
+        font-family: arial;
+    }
+
+    td {
+        border: solid white 1px;
+        padding: 5px;
+
+    }
+</style>
+
+<body>
+
+    <h1>Fazer uma pagina HTML que leia a altura, o peso e o sexo de uma pessoa por meio de um formulario e mostre a
+        pagina o IMC da pessoa e a categoria na qual se enquadra segundo a OMS. cada informação deve ser apresentada em
+        uma linha e a formatação em fonte arial e tamanmho 24
+        A formula para o calculo é IMC = peso / (altura * Altura)
+        a tabela a segui mostra as faixas para os homens
+    </h1>
+
+    <table>
+        <tr>
+            <td>Condição</td>
+            <td>IMC em Mulheres</td>
+            <td>IMC em Homem</td>
+        </tr>
+        <tr>
+            <td>Abaixo do Peso</td>
+            <td>
+                < 19,1 </td>
+            <td>
+                < 20,7 </td>
+        </tr>
+        <tr>
+            <td>No peso normal</td>
+            <td> 19,1 - 25,8</td>
+            <td> 20,7 - 26,4</td>
+        </tr>
+        <tr>
+            <td>Marginalmente acima do peso</td>
+            <td> 25,8 - 27,3</td>
+            <td> 26,4 - 27,8 </td>
+        </tr>
+        <tr>
+            <td>Acima do peso</td>
+            <td> 27,3 - 32,3 </td>
+            <td> 27,8 - 31,1 </td>
+        </tr>
+        <tr>
+            <td>Obeso</td>
+            <td> > 32,3 </td>
+            <td> > 31,1 </td>
+        </tr>
+    </table>
+    <hr>
+
+    <p>Digite sua altura</p>
+    <input type="text" id="altura" placeholder="Sua altura">
+    <hr>
+
+    <p>Digite seu peso</p>
+    <input type="text" id="peso" placeholder="Seu peso">
+    <hr>
+
+    <p>Selecione o seu sexo</p>
+    <select id="op">
+        <option value=""></option>
+        <option value="1"> Feminino</option>
+        <option value="2"> Masculino</option>
+    </select>
+    <br>
+    <button onclick="calcular()"> Click aqui para calcular</button>
+    <hr>
+    <div id="container"></div>
+
+
+
+    <script>
+        function calcular() {
+            var altura = document.getElementById('altura')
+            var peso = document.getElementById('peso')
+            var alturaint = Number(altura.value)
+            var pesoint = Number(peso.value)
+
+            var select = document.getElementById('op')
+            var valorSelecionado = select.value
+
+            var container = document.getElementById('container')
+            container.innerHTML = ''
+            var newParagraph = document.createElement('p')
+
+            if (valorSelecionado == 1) {
+                var imc = pesoint / (alturaint * alturaint)
+
+                if (imc <= 19.1) {
+                    newParagraph.textContent = "Você está abaixo do peso! Seu IMC é: " + imc
+                    container.appendChild(newParagraph)
+                }
+                else if (imc > 19.1 & imc < 25.8) {
+                    newParagraph.textContent = "Você está no peso normal! Seu IMC é: " + imc
+                    container.appendChild(newParagraph)
+                }
+                else if (imc > 25.8 & imc < 27.3) {
+                    newParagraph.textContent = "Você está Marginalmente acima do peso! Seu IMC é: " + imc
+                    container.appendChild(newParagraph)
+                }
+                else if (imc > 27.3 & imc < 32.3) {
+                    newParagraph.textContent = "Você está Acima do peso! Seu IMC é: " + imc
+                    container.appendChild(newParagraph)
+                }
+                else if (imc > 32.3) {
+                    newParagraph.textContent = "Você está Obeso! Seu IMC é: " + imc
+                    container.appendChild(newParagraph)
+                }
+            }
+
+            else if (valorSelecionado == 2) {
+                var imc = pesoint / (alturaint * alturaint)
+
+                if (imc <= 20.7) {
+                    newParagraph.textContent = "Você está abaixo do peso! Seu IMC é: " + imc
+                    container.appendChild(newParagraph)
+                }
+                else if (imc > 20,7  & imc < 26,4) {
+                    newParagraph.textContent = "Você está no peso normal! Seu IMC é: " + imc
+                    container.appendChild(newParagraph)
+                }
+                else if (imc > 26,4 & imc < 27,8) {
+                    newParagraph.textContent = "Você está Marginalmente acima do peso! Seu IMC é: " + imc
+                    container.appendChild(newParagraph)
+                }
+                else if (imc > 27,8 & imc < 31,1) {
+                    newParagraph.textContent = "Você está Acima do peso! Seu IMC é: " + imc
+                    container.appendChild(newParagraph)
+                }
+                else if (imc > 31,1) {
+                    newParagraph.textContent = "Você está Obeso! Seu IMC é: " + imc
+                    container.appendChild(newParagraph)
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

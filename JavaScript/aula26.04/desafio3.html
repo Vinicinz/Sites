@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 3 - Escreva um programa que verifique se um número dado é primo.
+ -->
+
+    <script>
+
+        var num = parseInt(prompt("digite seu numero para verificar se é primo: "))
+        var count = 0
+        var numprimo = 0
+        for (var i = 1; i <= num; i++) {
+            if (num % i == 0) {
+                count += 1
+                if ((num == i || num == 0) && count <= 2) {
+                    alert("seu numero é primo")
+                    numprimo += 1
+                    break
+                }
+            }
+        }
+        if (numprimo == 0) {
+            alert("seu numero não é primo")
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
